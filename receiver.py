@@ -11,5 +11,6 @@ s.bind((ip,port))
 
 while True:
     msg=s.recvfrom(100)
+    msg=msg.decode('ascii')
     print(msg)
-    s.sendto("1".encode('ascii'),msg[1])
+   
